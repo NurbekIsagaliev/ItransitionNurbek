@@ -6,16 +6,16 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:9000"
+      - "8080:80"
     volumes:
-      - /home/nurbek/ItransitionNurbek:/var/www/html
+      - ./:/app
     environment:
-      DATABASE_URL: "mysql://nurbek:1@database:3307/itransitionNurbek?serverVersion=8.0.36&charset=utf8mb4"
+      DATABASE_URL: "mysql://nurbek:1@database:3306/itransitionNurbek?serverVersion=8.0.36&charset=utf8mb4"
 
   database:
     image: mysql:8.0.36
     ports:
-      - "3307:3306"
+      - "3306:3306"
     environment:
       MYSQL_DATABASE: "itransitionNurbek"
       MYSQL_ROOT_PASSWORD: "1"
