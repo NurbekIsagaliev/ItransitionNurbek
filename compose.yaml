@@ -19,3 +19,6 @@ services:
     environment:
       MYSQL_DATABASE: "itransitionNurbek"
       MYSQL_ROOT_PASSWORD: "1"
+      MYSQL_USER: nurbek
+      MYSQL_PASSWORD: "1"
+    
